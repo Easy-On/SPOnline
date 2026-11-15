@@ -2,7 +2,7 @@
 # Only links to files and headings inside the repository are checked.
 # External URLs are not checked, because they are slow and often flaky.
 offline = true
-include_fragments = true
+include_fragments = "full"
 no_progress = true
 
 # AGENTS.md and the skills contain example links that are not real targets.
