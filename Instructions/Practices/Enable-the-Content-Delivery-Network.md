@@ -2,7 +2,7 @@
 
 ## Setup
 
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+If you skipped lab [Get started with SharePoint administration](../Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
 ## Task
 
@@ -39,6 +39,6 @@ Perform this task on WIN1.
 
     Wait for the diagnostics tool to finish. This can take a minute or two.
 
-    Compare the results with your analysis in Practice [Explore the Page Diagnostics for SharePoint tool](./Explore-the-Page-Diagnostics-for-SharePoint-tool.md). Did the page load time improve?
+    Compare the results with your analysis in practice [Explore the Page Diagnostics for SharePoint tool](./Explore-the-Page-Diagnostics-for-SharePoint-tool.md). Did the page load time improve?
 
     If time allows, repeat the diagnostics several times to get stable results.

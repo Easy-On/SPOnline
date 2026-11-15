@@ -3,7 +3,7 @@
 ## Setup
 
 1. Sign in to **WIN1** as **Administrator**.
-1. If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 1. Open the **Microsoft 365 admin center** (<https://admin.microsoft.com>) and sign in as the global administrator.
 
 ## Introduction

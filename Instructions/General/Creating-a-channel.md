@@ -8,7 +8,7 @@
 1. In Teams, at the top click the *New items* icon and click **New channel**.
 
     ![Create channel][figure 1]
-    Figure 1: Create channel
+    *Figure 1: Create channel*
 
 1. In Create a channel, click **Select a team**.
 1. In Pick a team to add new channel to, click the name of the team and click **Done**.
@@ -52,4 +52,4 @@
 
 [New-TeamChannel (MicrosoftTeams) | Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/new-teamchannel)
 
-[figure 1]:/images/Teams-new-channel.jpeg
+[figure 1]: ../../images/Teams-new-channel.jpeg

@@ -4,7 +4,7 @@
 
 On **WIN1** sign in as **Administrator**.
 
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
 ## Introduction
 
@@ -421,4 +421,4 @@ If time allows, you can sign in with various users and try some operations accor
 | IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to pages and documents, read access to Content scheduler, can only submit documents for approval |
 | DebraB@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                             |
 
-[figure 1]:/images/permissions-content-scheduler.png
+[figure 1]: ../../images/permissions-content-scheduler.png

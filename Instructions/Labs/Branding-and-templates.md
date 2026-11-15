@@ -4,9 +4,9 @@
 
 Perform this lab on WIN1.
 
-1. If you skipped lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
-1. If you skipped lab [Site administration](./Site-administration.md), execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
-2. Open the Microsoft 365 Admin Center and sign in as with the global administrator (**admin@\<your tenant\>.onmicrosoft.com**).
+1. If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. If you skipped lab [Site administration](Site-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. Open the Microsoft 365 Admin Center and sign in as with the global administrator (**admin@\<your tenant\>.onmicrosoft.com**).
 
 ## Introduction
 
@@ -23,7 +23,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 ## Exercise 1: Configure SharePoint branding
 
-1. Set up a Brand Center site with the name **Brand Guide** and the address **BrandGuide**. Take a note of the brand center site's URL and the brand center app's URL. You can navigate to the brand center apps anytime later using the *Settings* menu of your brand center site ([Figure 1]).
+1. Set up a Brand Center site with the name **Brand Guide** and the address **BrandGuide**. Take a note of the brand center site's URL and the brand center app's URL. You can navigate to the brand center apps anytime later using the *Settings* menu of your brand center site ([figure 1]).
 
     [Setting up Brand Center](../General/Setting-up-Brand-Center.md)
 
@@ -161,5 +161,5 @@ Perform all tasks of this exercise as **Lynne Robbins** (**LynneR@\<your tenant\
 
     [Applying a site template](../General/Applying-a-site-template.md)
 
-[Figure 1]:../../images/Brand-center-in-settings.png
+[figure 1]: ../../images/Brand-center-in-settings.png
 [figure 2]: ../../images/local-officefonts-folder.png

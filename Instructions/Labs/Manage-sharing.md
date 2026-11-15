@@ -4,7 +4,7 @@
 
 On **WIN1**, sign in as **Administrator**.
 
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
 Moreover, you need additional email accounts for this lab. Ideally, you have two accounts. One is a personal Microsoft or Entra account. The other must not be a Microsoft or Entra account, like a Gmail or GMX account. Consider creating a Microsoft and a Gmail account for this lab, if you do not have access to one of them.
 
@@ -165,5 +165,5 @@ Perform this task on WIN1.
 
 If time allows, you may verify that your invitation links do not work anymore.
 
-[figure 1]:/images/mail-sharing-invitation-folder.png
-[figure 2]:/images/mail-sharing-invitation-site.png
+[figure 1]: ../../images/mail-sharing-invitation-folder.png
+[figure 2]: ../../images/mail-sharing-invitation-site.png
