@@ -12,9 +12,9 @@ Perform this task on WIN1.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the ellipsis, **Extensions**, **Get extensions for Microsoft Edge**.
 1. In Edge Add-ons, in **Search extensions, themes, and more**, type **Page diagnostics for SharePoint** and press ENTER.
-1. Under Search results for "Page diagnostics for SharePoint", beside **Page diagnostics for SharePoint** ([Figure 1]), click **Get**.
+1. Under Search results for "Page diagnostics for SharePoint", beside **Page diagnostics for SharePoint** ([figure 1]), click **Get**.
 1. In Add "Page diagnostics for SharePoint" to Microsoft Edge?, click **Add extension**.
-1. In Microsoft Edge, click the icon *Extensions* and, beside **Page diagnostics for SharePoint**, click the icon *Show in toolbar* [Figure 2].
+1. In Microsoft Edge, click the icon *Extensions* and, beside **Page diagnostics for SharePoint**, click the icon *Show in toolbar* [figure 2].
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Click the icon *Page diagnostics for SharePoint* and, in the fly-out, click **Start**.
@@ -25,5 +25,5 @@ Perform this task on WIN1.
 
     If time allows, repeat the diagnostics several times to get stable results.
 
-[Figure 1]:/images/edge-Add-ons-page-diagnostics-for-sharepoint.png
-[Figure 2]:/images/edge-Page-diagnostics-for-SharePoint.png
+[figure 1]: ../../images/edge-Add-ons-page-diagnostics-for-sharepoint.png
+[figure 2]: ../../images/edge-Page-diagnostics-for-SharePoint.png

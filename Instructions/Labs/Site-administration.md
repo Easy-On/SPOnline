@@ -9,11 +9,11 @@ Students must have finished the following practices before starting this lab:
 
 On WIN1, sign in as Administrator.
 
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
-If you skipped the practice [Install Visual Studio Code](/Instructions/Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
+If you skipped the practice [Install Visual Studio Code](../Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
 
-If you skipped the practice [Install Microsoft Graph Beta PowerShell module](/Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
+If you skipped the practice [Install Microsoft Graph Beta PowerShell module](../Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
 
 ## Introduction
 
@@ -90,7 +90,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ![Site structure after exercise 1][figure 1]
-Figure 1: Site structure after exercise 1
+*Figure 1: Site structure after exercise 1*
 
 ### Task 1: Create a team site with a Microsoft 365 group
 
@@ -836,7 +836,7 @@ Perform this task on WIN1.
 1. [Verify that users cannot create SharePoint sites](#task-6-verify-that-users-cannot-create-sharepoint-sites)
 
 ![Site structure after exercise 3][figure 2]
-Figure 2: Site structure after exercise 3
+*Figure 2: Site structure after exercise 3*
 
 ### Task 1: Verify that users can create Microsoft 365 groups
 
@@ -1112,7 +1112,7 @@ Perform this task on WIN1.
 1. [Verify automatic redirection](#task-2-verify-automatic-redirection) from the old address to the new address
 
 ![Site structure after exercise 5][figure 3]
-Figure 3: Site structure after exercise 5
+*Figure 3: Site structure after exercise 5*
 
 ### Task 1: Change the address of a site
 
@@ -1361,6 +1361,6 @@ Perform this task on WIN1.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
 
-[figure 1]:/images/Lab-Site-administration-exercise-1.png
-[figure 2]:/images/Lab-Site-administration-exercise-3.png
-[figure 3]:/images/Lab-Site-administration-exercise-5.png
+[figure 1]: ../../images/Lab-Site-administration-exercise-1.png
+[figure 2]: ../../images/Lab-Site-administration-exercise-3.png
+[figure 3]: ../../images/Lab-Site-administration-exercise-5.png

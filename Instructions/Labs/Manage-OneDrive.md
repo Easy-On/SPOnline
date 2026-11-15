@@ -4,7 +4,7 @@
 
 1. On **WIN1**, sign in as **Admin**.
 
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
 ## Introduction
 
@@ -272,4 +272,4 @@ Perform this task on WIN1.
     Disconnect-SPOService
     ````
 
-[figure 1]:/images/mail-OneDrive-for-Business-contents-will-be-preserved.png
+[figure 1]: ../../images/mail-OneDrive-for-Business-contents-will-be-preserved.png

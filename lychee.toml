@@ -1,0 +1,9 @@
+# Link check for Markdown files. See .github/workflows/link-check.yml.
+# Only links to files and headings inside the repository are checked.
+# External URLs are not checked, because they are slow and often flaky.
+offline = true
+include_fragments = true
+no_progress = true
+
+# AGENTS.md and the skills contain example links that are not real targets.
+exclude_path = ["\\.claude/", "AGENTS\\.md"]

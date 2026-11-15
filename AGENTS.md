@@ -1,172 +1,85 @@
-# CLAUDE.md
+# AGENTS.md
 
-Lab guide for the course "Implementing and administering SharePoint Online and OneDrive for Business". All content is Markdown in English (US). Follow these conventions when creating or editing files.
+Guidance for AI agents creating and editing lab guides: Markdown repositories with labs, practices, and reusable instructions for training courses. Repository-specific facts (course name, scenario, machines, accounts, paths, scripts) belong in a `## Repository specifics` section at the end of this file.
 
-## Repository structure
+## Language
 
-| Folder | Content | File name pattern |
-| ------ | ------- | ----------------- |
-| `Instructions/Labs/` | Labs, performed by participants alone | Imperative, e.g. `Manage-permissions.md` |
-| `Instructions/Practices/` | Practices, demonstrated by the instructor | Imperative, e.g. `Configure-sharing-settings.md` |
-| `Instructions/General/` | Reusable how-to instructions, linked from labs | Gerund, e.g. `Creating-a-list.md`, `Managing-site-groups.md` |
-| `Instructor/` | Notes for instructors | |
-| `images/` | Screenshots referenced as figures | lowercase-with-hyphens, e.g. `teams-new-channel.jpeg` |
+All repository content is written in English (US): Markdown, file and folder names, scripts, comments, commit messages. Reply to the user in their language, but never write another language into repository files.
 
-File names: words separated by hyphens, first word capitalized, product names keep their capitalization (`Install-Microsoft-Graph-Beta-PowerShell-module.md`). The H1 heading equals the file name with spaces instead of hyphens.
+## Content types
 
-## Document templates
+| Type | Purpose | Duration | File name |
+| ---- | ------- | -------- | --------- |
+| Practice | Instructor demonstrates, participants follow along | 5-10 minutes | Imperative: `Configure-sharing-settings.md` |
+| Lab | Participants work independently | 15 minutes or more | Imperative: `Manage-permissions.md` |
+| General instruction | Reusable how-to, linked from labs and practices | | Gerund: `Creating-a-list.md` |
 
-### Lab (`Instructions/Labs/`)
+* Default folders: `Instructions/Labs/`, `Instructions/Practices/`, `Instructions/General/`, `Instructor/` (instructor notes), `images/` (screenshots, `lowercase-with-hyphens`). Follow the existing structure if it differs.
+* File names: words separated by hyphens, first word capitalized, product names keep their capitalization. The H1 equals the file name with spaces instead of hyphens, prefixed with `Practice: ` or `Lab: ` for practices and labs.
+* At most one lab per course module; a lab belongs to exactly one module.
+* No redundancy: before creating or revising a practice or lab, check that no other one covers the same tasks.
+* Minimize dependencies: each practice or lab must be completable on its own. Prefer objects that already exist over objects created by earlier practices or labs. Name an unavoidable dependency in Setup; do not add new ones.
+* If the repository provides skills for writing practices or labs, use them.
 
-```markdown
-# Lab: <Title>
+## Structure
 
-## Setup
+* **Lab:** `# Lab: <Title>`, `## Setup` (machine, sign-in, catch-up steps for skipped labs), `## Introduction` (scenario: what and why), `## Exercises` (linked list), then one `## Exercise n: <Title>` per exercise. Exercises contain numbered steps directly or an overview list linking to `### Task n: <Title>` sections. Tasks are self-contained: they start with opening the tool, navigating, and signing in. Alternative methods in a task use `####` headings.
+* **Practice:** `# Practice: <Title>`, optional `## Setup` and `## Introduction`, `## Task` (short goal, often a requirements list), `## Instructions` (starts with the sentence naming the machine or portal, then the steps).
+* **General instruction:** Gerund H1, generic steps with placeholders (`\<Group name\>`) instead of concrete values, either numbered steps directly or one `##` per method, and a final `## References` (plural) with one link per paragraph; link text = page title of the target.
 
-<Machine, sign-in, and catch-up scripts for skipped labs>
+## Methods
 
-## Introduction
+* If a task can be done in several ways (desktop, web portal, PowerShell, admin tool), give instructions for all of them. With only one way, use no method heading; start directly with the sentence naming the machine or portal.
+* Method headings are exactly one level below their parent. Each PowerShell module is a separate method at the same level (`### Microsoft Graph PowerShell`, `### Microsoft Entra PowerShell`), not grouped under a general `PowerShell` heading. With only one PowerShell method, the heading is `### PowerShell`.
+* Each method starts with the sentence naming the machine or portal.
 
-<Contoso scenario: what Contoso wants and why>
+## Step wording
 
-## Exercises
+* One imperative action per step, location context first: `In SharePoint admin center, click **Active sites**.`
+* Start a step with `In <page/panel/dialog>,` only when the location differs from the previous step. After switching tabs, the first step starts with `On the tab <Name>,`. Never start with `On the page`.
+* A step that opens a new page, panel, or dialog is followed by a step starting with `In <that page/panel/dialog>,`. If an action significantly changes the view (e.g. sorting a table), the next action is a separate step.
+* After signing in, state where the user is: `After signing in, you are in the **Microsoft Entra admin center**, on the home page.`
+* Verbs: *click*, *type*, *select*, *activate*/*deactivate* (checkboxes, switches), *clear* (checkboxes), *find and click* (people pickers, search fields), *navigate to*, *execute* (scripts), *sign in as*, *sign out*.
+* Several clicks in a path: `click **Sites**, **Active sites**`.
+* Icons without text: `click the *Settings* icon (the gear icon)`.
+* Window, dialog, page, and tab names in the location part are not bold. Message boxes are quoted verbatim without quotation marks: `In the message box Remove user?, click **Remove**.`
+* Verifications and expected results are never separate steps; they are indented paragraphs below the step: `Verify that the user is listed.`
+* Notes are paragraphs (indented inside a step) with an italic label: `*Note:* ...` or `*Important:* ...`. No GitHub admonitions.
 
-1. [<Exercise title>](#exercise-1-<anchor>)
-1. ...
+## Formatting
 
-## Exercise 1: <Title>
+* **Bold** everything the user clicks, types, selects, or must recognize exactly: interacted UI elements, values to enter, names of users, groups, sites, and files, app names, machine names, accounts, URLs, file paths. UI elements that are only read are not bold.
+* Numbered lists always use `1.` for every item. Bullets use `*`, not `-`.
+* Nested content (sub-lists, code, tables, notes, links, figures) is indented by 4 spaces and separated from the step by blank lines.
+* Placeholders in angle brackets with backslashes: `**admin@\<your tenant\>.onmicrosoft.com**`. Escape asterisks in running text: `**Word Template (\*.dotx)**`.
+* Pipe tables with a header row, padded for alignment, for values to enter (names, groups, settings, expected results).
+* In running text, write `lab` and `practice` in lowercase (`If you skipped lab [...]`). Capitalize them only in the H1 prefix (`Lab:`, `Practice:`) and when starting a sentence.
+* One H1 per file, then `##`, `###`, `####`. Blank line before and after headings, paragraphs, lists, tables, and code blocks. The file ends with a single newline.
 
-<Either numbered steps directly, or an overview list linking to tasks:>
+### Links and figures
 
-1. [<Task title>](#task-1-<anchor>) <additional parameters>
+* All links to other files in the repository use relative paths, never absolute paths starting with `/`: `../General/Managing-site-groups.md` from a lab or practice, `./Other-lab.md` or just `Other-lab.md` within the same folder, `../../images/<file>.png` for images.
+* Always include the `.md` extension and the exact capitalization of the file name.
+* Link text is the H1 of the target without the `Lab:` or `Practice:` prefix: `[Managing site groups](../General/Managing-site-groups.md)`.
+* Links to general instructions go in an indented paragraph below the step.
+* Links to other labs or practices, for example in Setup, use the same relative form: `[Get started](./Get-started.md)`.
+* Anchors are GitHub style: lowercase, spaces to hyphens, punctuation removed (`#task-2-create-groups`). Link only to headings in files of this repository, and re-check all anchors when renaming a heading.
+* External links point to the stable page without tracking parameters or session-specific parts and use one locale consistently (for example `en-us`). Link text is the page title of the target.
+* After renaming or moving files, search the repository for the old file name and fix all links. Where possible, run a link checker (for example `lychee` or `markdown-link-check`) locally or in CI.
+* Figures are reference-style with descriptive alt text: `![<Alt text>][figure 1]`, referenced in text as `like in [figure 1]`. Figure captions are written in italics on the line directly below the image, in the form `*Figure 1: <Caption>*`, everywhere without exception. Definitions at the end of the file, lowercase `figure`, relative paths: `[figure 1]: ../../images/<file>.png`.
 
-### Task 1: <Title>
+### Scripts and code
 
-Perform this task on WIN1.
+* Code blocks use four backticks with a language identifier, indented by 4 spaces inside steps. Longer explanations use block comments (`<# ... #>` in PowerShell).
+* Values the user must enter stay empty with a comment: `$tenantName = '' # Between the quotes insert your tenant name`.
+* Long commands use line continuation, one parameter per line; in PowerShell backticks and `-Parameter:$value` syntax.
+* End PowerShell procedures that open a session with a disconnect step (e.g. `Disconnect-MgGraph`, `Disconnect-PnPOnline`).
 
-1. ...
+## Repository specifics
 
-[figure 1]: /images/<file>.png
-```
-
-- Optional H4 subsections inside a task for alternative methods: `#### Web UI`, `#### PowerShell`.
-- Each task is self-contained: it starts with opening the browser/tool, navigating, and signing in again (e.g. `1. Open **Microsoft Edge**.` / `1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.` / `1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.`).
-- Catch-up sentence for skipped labs (use verbatim):
-  `If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.`
-
-### Practice (`Instructions/Practices/`)
-
-```markdown
-# Practice: <Title>
-
-## Setup          (optional)
-
-## Introduction   (optional)
-
-## Task
-
-<Short description of the goal, often as a bullet list of requirements>
-
-## Instructions
-
-Perform this task on WIN1.
-
-1. Sign in to **WIN1** as **Administrator**.
-1. ...
-```
-
-### General instruction (`Instructions/General/`)
-
-```markdown
-# <Gerund title, e.g. Creating a list>
-
-<Either numbered steps directly, or H2 sections per method/sub-procedure:>
-
-## Web UI            (or: SharePoint admin center, Desktop experience, ...)
-
-## PowerShell        (or: PnP PowerShell module, SharePoint Online module, Windows PowerShell)
-
-## References
-
-[<Page title> | Microsoft Learn](https://learn.microsoft.com/en-us/...)
-
-[<Next reference>](...)
-```
-
-- Always end with `## References` (plural); each link on its own paragraph separated by blank lines; link text = the page title of the target page.
-- Steps are generic (no fixed lab values); use placeholders such as `\<Group name\>`.
-
-## Formatting rules
-
-### Lists
-
-- Numbered lists always use `1.` for every item (auto-numbering), never `2.`, `3.`.
-- Bullet lists use `*`, not `-`.
-- Nested content (sub-lists, code blocks, tables, notes, links to General instructions) is indented by **4 spaces** and separated from the surrounding step by blank lines.
-- Explanations, expected results, and verifications after a step are indented paragraphs (4 spaces) below the step, e.g. `Verify that Debra has the permission level Edit.`
-
-### Step wording
-
-- Imperative, one action per step, with location context first: `In <window/page/panel>, <action> **<UI element>**.`
-  - `In SharePoint admin center, click **Active sites**.`
-  - `In Create Group, under **Name**, type **News _ Contoso Approvers**. Click **Create**.`
-- Multiple clicks in one path: `click **Show all** and **SharePoint**` or `click **Sites**, **Active sites**`.
-- Verbs: *click*, *type*, *select*, *activate* (checkboxes, switches), *deactivate* (switches), *clear* (checkboxes), *find and click* (people pickers/search), *navigate to*, *execute* (scripts).
-- Icons without text are in italics with a hint: `click the *Settings* icon (the gear icon)`.
-- Window/dialog names in the location part are **not** bold; names of message boxes are quoted verbatim without quotes: `In the message box Remove as site owners?, click **Remove**.`
-
-### Bold
-
-Bold (`**...**`) for everything the user clicks, types, selects, or must recognize exactly: UI elements, values to enter, site/list/user names in instructions, app names (**Microsoft Edge**, **PowerShell**), machine names (**WIN1**), accounts, URLs to navigate to, file paths to execute.
-
-### Placeholders and escaping
-
-- Placeholders in angle brackets, escaped with backslashes: `\<your tenant\>`, e.g. `**https://\<your tenant\>.sharepoint.com/sites/news**`, `**admin@\<your tenant\>.onmicrosoft.com**`.
-- Escape asterisks in literal text: `**Word Template (\*.dotx)**`.
-
-### Code
-
-- Code blocks use **four backticks** with language identifier: ````` ````powershell `````.
-- Code blocks inside steps are indented by 4 spaces.
-- Values the user must fill in are empty strings with an explanatory comment:
-  `$tenantName = '' # Between the quotes insert your tenant name`
-- Longer explanations in code use block comments `<# ... #>`.
-- Long cmdlet calls are split with backtick line continuation, one parameter per line, using `-Parameter:$value` syntax.
-- PowerShell procedures end with a disconnect step (`Disconnect-SPOService`, `Disconnect-PnPOnline`).
-
-### Links
-
-- Links to General instructions from labs/practices: relative path, on its own indented paragraph below the step:
-
-  ```markdown
-  1. Add **Lynne Robbins** to the **Site Owners** group of **Brand Guide**.
-
-      [Managing site groups](../General/Managing-site-groups.md)
-  ```
-
-- Links to other labs in Setup sections: repository-absolute path `/Instructions/Labs/<File>.md`.
-- In-document anchors: GitHub style, lowercase, spaces → hyphens, punctuation removed: `#exercise-1-manage-site-permissions`, `#task-2-create-sharepoint-groups`.
-
-### Figures
-
-- Reference-style images: `![<Alt text describing the screenshot>][figure 1]`, indented when inside a step.
-- In text: `like in [figure 1]`.
-- Definitions at the end of the file, lowercase `figure`, preferably repository-absolute paths:
-  `[figure 1]: /images/permissions-content-scheduler.png`
-
-### Tables
-
-- Pipe tables with header separator; columns padded with spaces for alignment in the source.
-- Used for lists of values to enter (sites, groups, colors, users and expected results).
-
-### Notes
-
-- Notes as separate (indented if inside a step) paragraph: `*Note:* ...` or `*Important:* ...` (italic label). No GitHub admonitions (`> [!NOTE]`).
-
-### General
-
-- Headings: `#` H1 once per file, then `##`, `###`, `####`; blank line before and after each heading.
-- Blank line between paragraphs and around lists, tables, and code blocks.
-- Files end with a single newline.
-- Scenario company is **Contoso**; standard users are e.g. Lynne Robbins (`LynneR`), Debra Berger, Irvin Sayers, Adele Vance, Patti Fernandez; lab machine is **WIN1**.
-- Scripts used in setup steps live under `C:\LabResources\Solutions\`.
+* Course: Implementing and administering SharePoint Online and OneDrive for Business.
+* Scenario company: **Contoso**. Standard users: Lynne Robbins (`LynneR`), Debra Berger, Irvin Sayers, Adele Vance, Patti Fernandez.
+* Lab machine: **WIN1**. Practices start with `Sign in to **WIN1** as **Administrator**.`
+* Catch-up sentence for skipped labs (use verbatim): `If you skipped lab [Get started with SharePoint administration](Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.`
+* Scripts used in setup steps live under `C:\LabResources\Solutions\`.
+* Link check: `lychee --config lychee.toml '**/*.md'` (also runs in GitHub Actions, see `.github/workflows/link-check.yml`). Run it after renaming or moving files.
